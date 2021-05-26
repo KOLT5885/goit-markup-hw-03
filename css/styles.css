@@ -8,15 +8,9 @@
   --bg-color-section: #f5f4fa;
   --black-color: #000000;
   --address-color: rgba(255, 255, 255, 0.6);
+  --border-color: #ececec;
   --font-family-logo: raleway, sans-serif;
   --primery-font-family: roboto, sans-serif;
-}
-
-/* global */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
@@ -27,6 +21,12 @@ body {
 
 .container {
   width: 1200px;
+  padding-top: 94px;
+  padding-right: 15px;
+  padding-bottom: 94px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .title {
@@ -39,6 +39,11 @@ body {
   font-weight: 400;
   letter-spacing: 0.03em;
   color: var(--primery-text-color);
+}
+.list {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
 }
 
 .visually-hidden {
@@ -57,6 +62,18 @@ body {
 
 /* header */
 
+.main-nav,
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav {
+  border-bottom: 1px solid var(--border-color);
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .logo {
   font-family: var(--font-family-logo);
   font-weight: 700;
@@ -67,42 +84,64 @@ body {
   text-decoration: none;
 }
 
+.nav-list .logo {
+  margin-right: 93px;
+}
+
 .logo .web {
   color: var(--accent-color);
 }
 
-.nav-list,
-.contact-list {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.143;
-  list-style: none;
-  letter-spacing: 0.02em;
-  text-align: left;
+.site-list {
+  display: flex;
 }
-.nav-list a,
-.contact-list a {
+
+.site-list .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-list .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   text-decoration: none;
   color: var(--title-text-color);
 }
 
-.contact-list a {
-  color: var(--primery-text-color);
+.contact-list {
+  display: flex;
+  margin-left: auto;
 }
 
-.nav-list a:hover,
-.nav-list a:focus,
-.nav-list a:active,
-.phone-link:hover,
-.phone-link:focus,
-.phone-link:active,
-.mail-link:hover,
-.mail-link:focus,
-.mail-link:active {
+.contact-list .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-list,
+.contact-list {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.contact-list .link {
+  color: var(--primery-text-color);
+  text-decoration: none;
+}
+
+.site-list .link:hover,
+.site-list .link:focus,
+.site-list .link:active,
+.contact-list .link:hover,
+.contact-list .link:focus,
+.contact-list .link:active {
   color: var(--accent-color);
 }
 
-.nav-list .current-page {
+.site-list .current {
   color: var(--accent-color);
 }
 
