@@ -13,17 +13,36 @@
   --primery-font-family: roboto, sans-serif;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: var(--primery-font-family);
   background: var(--white-color);
   color: var(--primery-text-color);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6.p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .container {
   width: 1200px;
   padding-top: 94px;
   padding-right: 15px;
-  padding-bottom: 94px;
+  /*padding-bottom: 94px;*/
   padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
@@ -149,33 +168,54 @@ body {
 
 /* hero*/
 
-.hero .container {
+.hero {
   background-color: var(--bg-color);
+
+  /*если дизйнерська мысль была дать макету ширину 1600px тогда необходимо
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  */
+}
+
+.hero .container {
+  padding-top: 200px;
+  padding-bottom: 0px;
+  text-align: center;
 }
 
 .hero .title {
+  margin-bottom: 40px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.363;
-  text-align: center;
   letter-spacing: 0.06em;
-  color: var(--white-color);
   text-transform: uppercase;
-  width: 696px;
+
+  color: var(--white-color);
 }
 
 .hero .order-service {
+  border-style: none;
+  border-radius: 4px;
+  padding-right: 32px;
+  padding-left: 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 200px;
+  min-width: 200px;
+
   font-family: var(--primery-font-family);
+  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
-  text-align: center;
   letter-spacing: 0.06em;
   color: var(--white-color);
   background-color: var(--accent-color);
-  border-style: none;
+
   cursor: pointer;
-  width: 200px;
 }
 
 .hero .order-service:hover,
@@ -186,32 +226,62 @@ body {
 /* features */
 
 .features .features-list {
+  display: flex;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+
   list-style: none;
-  width: 270px;
   font-size: 14px;
   text-align: left;
   letter-spacing: 0.03em;
 }
 
+.features-list .item {
+  width: 270px;
+}
+
+.features-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .features .title {
+  margin-bottom: 10px;
   line-height: 1.143;
   text-transform: uppercase;
 }
 
 .features .text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+
   line-height: 1.1714;
 }
 
 /* activities */
 
 .activities .title {
+  margin-bottom: 50px;
+
   font-size: 36px;
   line-height: 1.167;
   text-align: center;
 }
 
 .activities .activities-list {
+  display: flex;
   list-style: none;
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.activities-list .item + .item {
+  margin-left: 30px;
+}
+
+.activities-list .img {
+  display: block;
   width: 370px;
 }
 
