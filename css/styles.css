@@ -120,6 +120,7 @@ h6.p {
   margin-right: 50px;
 }
 
+.contact-list .link,
 .site-list .link {
   display: block;
   padding-top: 32px;
@@ -409,10 +410,6 @@ h6.p {
   color: var(--accent-color);
 }
 
-/*.footer-address-list .link {
-  text-decoration: none;
-}*/
-
 /* PORTFOLIO*/
 
 .portfolio .filters,
@@ -499,7 +496,6 @@ h6.p {
   padding-bottom: 20px;
   padding-left: 24px;
 
-  /*width: 322px;*/
   text-align: left;
 }
 
